@@ -6,7 +6,7 @@ export default {
     type: 'document',
     icon: HiAdjustments,
     __experimental_actions: [
-        /*"create", /*"delete",*/ "update", "publish"
+        "create", /*"delete",*/ "update", "publish"
     ],
     fields: [
         {
