@@ -9,8 +9,10 @@ export default function Page({ data }) {
     // console.log(data.portfolio[0].allVideos)
     const allVideos = data.portfolio[0].allVideos;
 
-    const id = getYouTubeId(allVideos[0].url)
-    console.log(id)
+    const opts = {
+        height: '180',
+        width: '320',
+    }
 
     let navData = []
     const nav = data.navigation[0].navigation
@@ -22,7 +24,13 @@ export default function Page({ data }) {
         <main>
             <Navbar navigation={navData} />
             <h1 className="text-2xl font-bold">{pageData.title}</h1>
-            <YouTube videoId={id} width={10} />
+            <div>
+                {allVideos.map((item, index) => (
+                    <div key={index} className='m-2 w-full'>
+                        <YouTube key={index} videoId={getYouTubeId(item.url)} opts={opts} />
+                    </div>
+                ))}
+            </div>
         </main>
     )
 }
