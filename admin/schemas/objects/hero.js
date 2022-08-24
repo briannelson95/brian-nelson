@@ -11,7 +11,7 @@ export default {
         {
             name: 'tagline',
             title: 'Tagline',
-            type: 'simpleBlockContent'
+            type: 'string'
         },
         {
             name: 'image',

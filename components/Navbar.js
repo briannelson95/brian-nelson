@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Navbar({ navigation }) {
   return (
     <>
-        <div>
+        <div className='flex space-x-4'>
             {navigation.map((item, index) => (
                 <Link key={index} href={item.href}><a>{item.title}</a></Link>
             ))}
