@@ -5,7 +5,7 @@ import YouTube from 'react-youtube'
 const Preview = ({value}) => {
 	const { url } = value
 	const id = getYouTubeId(url)
-	return (<YouTube videoId={id} width={10} />)
+	return (<YouTube videoId={id} width={5} />)
 }
 
 export default {
