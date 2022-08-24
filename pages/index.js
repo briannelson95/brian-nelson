@@ -1,10 +1,12 @@
 import Navbar from "../components/Navbar"
+import { urlFor } from "../lib/modules"
 import { homepage } from "../lib/queries"
 import { client } from "../lib/sanity"
 
 export default function Home({ data }) {
   const pageData = data.pageData[0]
-  // console.log(data.navigation[0].navigation[0].title)
+  console.log(urlFor(pageData.hero.image).url())
+  const image = urlFor(pageData.hero.image).url()
   
   let navData = []
   const nav = data.navigation[0].navigation
@@ -15,7 +17,9 @@ export default function Home({ data }) {
   return (
     <main>
       <Navbar navigation={navData} />
-      <h1 className="text-2xl font-bold">{pageData.title}</h1>
+      <section className={`bg-[url(${urlFor(pageData.hero.image).url()})]`}>
+        <h1 className="text-2xl font-bold">{pageData.title}</h1>
+      </section>
     </main>
   )
 }

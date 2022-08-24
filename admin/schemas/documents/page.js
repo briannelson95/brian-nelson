@@ -23,6 +23,11 @@ export default {
             }
         },
         {
+            name: 'hero',
+            title: 'Hero Content',
+            type: 'hero'
+        },
+        {
             name: 'image',
             title: 'Featured Image',
             type: 'mainImage'

@@ -13,6 +13,8 @@ import video from './documents/video'
 import youtube from './objects/youtube'
 import portfolio from './documents/portfolio'
 import blockContent from './objects/blockContent'
+import hero from './objects/hero'
+import cta from './objects/cta'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +35,7 @@ export default createSchema({
     mainImage,
     openGraph,
     youtube,
+    hero,
+    cta,
   ]),
 })
