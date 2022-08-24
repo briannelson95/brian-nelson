@@ -28,14 +28,14 @@ export default {
             type: 'hero'
         },
         {
-            name: 'image',
-            title: 'Featured Image',
-            type: 'mainImage'
-        },
-        {
             name: 'content',
             title: 'Main Content',
             type: 'blockContent'
+        },
+        {
+            name: 'image',
+            title: 'Featured Image',
+            type: 'mainImage'
         },
         {
             name: 'seo',
