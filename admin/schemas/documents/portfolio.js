@@ -3,7 +3,7 @@ export default {
     title: 'Portfolio',
     type: 'document',
     __experimental_actions:[
-        /*"create", /*"delete",*/ "update", "publish"
+        "create", /*"delete",*/ "update", "publish"
     ],
     fields: [
         {
