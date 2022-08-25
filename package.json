@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "sanity": "cd admin && sanity start",
-    "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
