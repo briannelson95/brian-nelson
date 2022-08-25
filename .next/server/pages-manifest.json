@@ -2,5 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/portfolio": "pages/portfolio.js"
+=======
+  "/": "pages/index.js",
+  "/[slug]": "pages/[slug].js"
+>>>>>>> parent of c90088ca6 (Homepage data)
 }

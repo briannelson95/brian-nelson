@@ -131,7 +131,11 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = function() { return "070aaec1c1be95b1"; }
+=======
+/******/ 		__webpack_require__.h = function() { return "1f40e7d77132e18c"; }
+>>>>>>> parent of c90088ca6 (Homepage data)
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
