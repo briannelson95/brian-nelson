@@ -21,12 +21,10 @@ export default function Home({ data }) {
   
   let navData = []
   const nav = data.navigation[0].navigation
-  // console.log(nav)
   for (let i in nav) {
     navData.push({
       title: nav[i].title, 
       href: nav[i].slug.current,
-      // icon: nav[i].icon
     })
   }
 
