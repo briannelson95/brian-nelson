@@ -9,7 +9,6 @@ import BlockContent from '@sanity/block-content-to-react'
 
 export default function Home({ data }) {
   const pageData = data.pageData[0]
-  console.log(pageData.hero)
 
   const videos = data.videos[0].allVideos
 
@@ -22,14 +21,19 @@ export default function Home({ data }) {
   
   let navData = []
   const nav = data.navigation[0].navigation
+  // console.log(nav)
   for (let i in nav) {
-    navData.push({title: nav[i].title, href: nav[i].slug.current})
+    navData.push({
+      title: nav[i].title, 
+      href: nav[i].slug.current,
+      icon: nav[i].icon
+    })
   }
 
   return (
     <main className="mb-32">
       <Navbar navigation={navData} />
-      <section className="bg-slate-300 dark:bg-slate-500 h-[90vh]" style={{backgroundImage: `url(${urlFor(pageData.hero.image).url()})`}}>
+      <section className="bg-slate-300 dark:bg-slate-500 h-[75vh] md:h-[80vh]" style={{backgroundImage: `url(${urlFor(pageData.hero.image).url()})`, backgroundSize: 'cover'}}>
         <div className="mx-10 pt-12 md:w-1/3">
           <h1 className="text-4xl md:text-6xl font-bold uppercase">{pageData.hero.heading}</h1>
           <h3 className="text-xl md:text-3xl">{pageData.hero.tagline}</h3>

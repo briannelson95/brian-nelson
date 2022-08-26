@@ -38,6 +38,11 @@ export default {
             type: 'blockContent'
         },
         {
+            name: 'icon',
+            title: 'Icon',
+            type: 'iconPicker'
+        },
+        {
             name: 'seo',
             title: 'SEO',
             type: 'openGraph',
