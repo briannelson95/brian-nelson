@@ -26,7 +26,7 @@ export default function Home({ data }) {
     navData.push({
       title: nav[i].title, 
       href: nav[i].slug.current,
-      icon: nav[i].icon
+      // icon: nav[i].icon
     })
   }
 

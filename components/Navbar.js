@@ -5,13 +5,13 @@ import { HiHome, HiVideoCamera, HiMail } from 'react-icons/hi'
 
 export default function Navbar({ navigation }) {
   console.log(navigation)
-  const home = (navigation[0].icon.provider[0].toUpperCase() + navigation[0].icon.provider.slice(1)) + (navigation[0].icon.name[0].toUpperCase() + navigation[0].icon.name.slice(1)) 
-  console.log(home)
-  const homeIcon = () => {
-    return (
-      `<${home} />`
-    )
-  }
+  // const home = (navigation[0].icon.provider[0].toUpperCase() + navigation[0].icon.provider.slice(1)) + (navigation[0].icon.name[0].toUpperCase() + navigation[0].icon.name.slice(1)) 
+  // console.log(home)
+  // const homeIcon = () => {
+  //   return (
+  //     `<${home} />`
+  //   )
+  // }
 
   return (
     <>
