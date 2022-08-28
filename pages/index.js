@@ -29,10 +29,10 @@ export default function Home({ data }) {
   }
 
   return (
-    <main className="mb-32">
+    <main className="mb-12">
       <Navbar navigation={navData} />
-      <section className="bg-slate-300 dark:bg-slate-500 h-[75vh] md:h-[80vh]" style={{backgroundImage: `url(${urlFor(pageData.hero.image).url()})`, backgroundSize: 'cover'}}>
-        <div className="mx-10 pt-12 md:w-1/3">
+      <section className="text-white bg-slate-300 dark:bg-slate-500 h-[75vh] md:h-[80vh]" style={{backgroundImage: `url(${urlFor(pageData.hero.image).url()})`, backgroundSize: 'cover'}}>
+        <div className="mx-8 pt-12 pr-6 md:w-1/3">
           <h1 className="text-4xl md:text-6xl font-bold uppercase">{pageData.hero.heading}</h1>
           <h3 className="text-xl md:text-3xl">{pageData.hero.tagline}</h3>
           <div className="mt-10">
@@ -42,24 +42,26 @@ export default function Home({ data }) {
           </div>
         </div>
       </section>
-      <section>
-        <h2 className="text-2xl">Featured Videos</h2>
-        <div>
+      <section className="mx-8 mb-5">
+        <h2 className="text-2xl font-bold my-2">Featured Videos</h2>
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
           {videos.map((item, index) => (
-            <div key={index} className='m-2 w-full'>
+            <div key={index} className='w-full'>
               <YouTube key={index} videoId={getYouTubeId(item.url)} opts={opts} />
             </div>
           ))}
         </div>
       </section>
-      <section>
-        <h2 className="text-2xl">What people are saying</h2>
-          {testimonialArr.map((item, index) => (
-            <div key={index} className="m-2" >
-              <BlockContent blocks={item.body} />
-              <h4>- {item.name}</h4>
-            </div>
-          ))}
+      <section className="bg-slate-800 text-white dark:bg-slate-700 px-8 py-2">
+        <h2 className="text-2xl font-bold">What people are saying</h2>
+          <div className="mt-2 grid grid-cols-1 gap-4">
+            {testimonialArr.map((item, index) => (
+              <div key={index} className="" >
+                <BlockContent blocks={item.body} />
+                <h4 className="font-medium text-right">- {item.name}</h4>
+              </div>
+            ))}
+          </div>
       </section>
     </main>
   )

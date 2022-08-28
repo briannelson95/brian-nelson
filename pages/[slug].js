@@ -13,8 +13,8 @@ export default function Page({ data }) {
 
     return(
         <main>
-            {/* <Navbar navigation={navData} />
-            <h1 className="text-2xl font-bold">{pageData.title}</h1> */}
+            <Navbar navigation={navData} />
+            <h1 className="text-2xl font-bold">{pageData.title}</h1>
         </main>
     )
 }
