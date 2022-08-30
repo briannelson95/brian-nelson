@@ -43,7 +43,8 @@ export default function Home({ data }) {
         </div>
       </section>
       <section className="mx-8 mb-5">
-        <h2 className="text-2xl font-bold my-2">Featured Videos</h2>
+        <h2 className="text-2xl font-bold my-3">Featured Videos</h2>
+        <hr className="w-1/4 mb-4" />
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
           {videos.map((item, index) => (
             <div key={index} className='w-full'>

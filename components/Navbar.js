@@ -21,11 +21,11 @@ export default function Navbar({ navigation }) {
           </div>
           {/* desktop */}
           <div className='hidden md:block overflow-hidden bg-white text-black w-screen px-4 dark:bg-slate-800 dark:text-white'>
-            <div className='h-14 flex items-center'>
+            <div className='flex'>
               {navigation.map((item, index) => (
                   <Link key={index} href={item.href}>
-                    <a className='mx-5 first:mr-auto'>
-                      <div>{item.title}</div>
+                    <a className='h-14 flex items-center first:mr-auto hover:bg-slate-700 hover:text-white dark:hover:bg-white dark:hover:text-black px-5 first:hover:bg-inherit first:hover:text-inherit'>
+                      <div className=''>{item.title}</div>
                     </a>
                   </Link>
               ))}
