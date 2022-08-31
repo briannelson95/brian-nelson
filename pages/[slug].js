@@ -1,9 +1,11 @@
 import Navbar from "../components/Navbar";
 import { allPages } from "../lib/queries";
 import { client } from "../lib/sanity";
+import BlockContent from '@sanity/block-content-to-react';
 
 export default function Page({ data }) {
     const pageData = data.pageData;
+    // console.log(pageData.body)
 
     let navData = []
     const nav = data.navigation[0].navigation
@@ -14,7 +16,18 @@ export default function Page({ data }) {
     return(
         <main>
             <Navbar navigation={navData} />
-            <h1 className="text-2xl font-bold">{pageData.title}</h1>
+            <section className="mx-9">
+                <h1 className="text-2xl font-bold mb-3">{pageData.title}</h1>
+                <hr className="w-1/6" />
+                <div className="my-2">
+                    {pageData.content
+                        ? <BlockContent blocks={pageData.content} />
+                        : <>No content yet</>
+                    }
+                </div>
+            </section>
+            
+            
         </main>
     )
 }
