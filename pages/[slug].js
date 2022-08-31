@@ -2,6 +2,8 @@ import Navbar from "../components/Navbar";
 import { allPages } from "../lib/queries";
 import { client } from "../lib/sanity";
 import BlockContent from '@sanity/block-content-to-react';
+import Image from 'next/future/image';
+import { urlFor } from '../lib/modules';
 
 export default function Page({ data }) {
     const pageData = data.pageData;
