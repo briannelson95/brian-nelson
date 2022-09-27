@@ -18,7 +18,7 @@ export default function Page({ data }) {
     return(
         <main>
             <Navbar navigation={navData} />
-            <div className="bg-slate-300 dark:bg-slate-500 w-full h-56" style={{backgroundImage: `url(${urlFor(pageData.image).url()})`, backgroundSize: 'cover'}} />
+            <div className="w-full h-56" style={{backgroundImage: `url(${urlFor(pageData.image).url()})`, backgroundSize: 'cover'}} />
             <section className="mx-9 mt-2">
                 <h1 className="text-2xl font-bold mb-3">{pageData.title}</h1>
                 <hr className="w-1/6" />

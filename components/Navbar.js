@@ -20,11 +20,11 @@ export default function Navbar({ navigation }) {
             </div>
           </div>
           {/* desktop */}
-          <div className='hidden md:block overflow-hidden bg-white text-black w-screen px-4 dark:bg-slate-800 dark:text-white'>
+          <div className='hidden md:block w-full overflow-hidden bg-white text-black dark:bg-slate-800 dark:text-white'>
             <div className='flex'>
               {navigation.map((item, index) => (
                   <Link key={index} href={item.href}>
-                    <a className='h-14 flex items-center first:mr-auto hover:bg-slate-700 hover:text-white dark:hover:bg-white dark:hover:text-black px-5 first:hover:bg-inherit first:hover:text-inherit'>
+                    <a className='h-14 flex items-center first:mr-auto first:p-0 hover:bg-slate-700 hover:text-white dark:hover:bg-white dark:hover:text-black px-5 first:hover:bg-inherit first:hover:text-inherit'>
                       <div className=''>{item.title}</div>
                     </a>
                   </Link>

@@ -15,6 +15,9 @@ export default function Home({ data }) {
   const opts = {
     height: '180',
     width: '320',
+    payerVars: {
+      modestbranding: 1
+    }
   }
 
   const testimonialArr = data.testimonials
@@ -29,41 +32,10 @@ export default function Home({ data }) {
   }
 
   return (
-    <main className="mb-12">
+    <main>
       <Navbar navigation={navData} />
-      <section className="text-white bg-slate-300 dark:bg-slate-500 h-[75vh] md:h-[80vh]" style={{backgroundImage: `url(${urlFor(pageData.hero.image).url()})`, backgroundSize: 'cover'}}>
-        <div className="mx-8 pt-12 pr-6 md:w-1/3">
-          <h1 className="text-4xl md:text-6xl font-bold uppercase">{pageData.hero.heading}</h1>
-          <h3 className="text-xl md:text-3xl">{pageData.hero.tagline}</h3>
-          <div className="mt-10">
-            <Link href={pageData.hero.cta.link.slug.current}>
-              <button className="bg-white py-4 px-5 text-black hover:bg-slate-800 hover:text-white">{pageData.hero.cta.title}</button>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="mx-8 mb-5">
-        <h2 className="text-2xl font-bold my-3">Featured Videos</h2>
-        <hr className="w-1/4 mb-4" />
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
-          {videos.map((item, index) => (
-            <div key={index} className='w-full'>
-              <YouTube key={index} videoId={getYouTubeId(item.url)} opts={opts} />
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="bg-slate-800 text-white dark:bg-slate-700 px-8 py-2">
-        <h2 className="text-2xl font-bold">What people are saying</h2>
-          <div className="mt-2 grid grid-cols-1 gap-4">
-            {testimonialArr.map((item, index) => (
-              <div key={index} className="" >
-                <BlockContent blocks={item.body} />
-                <h4 className="font-medium text-right">- {item.name}</h4>
-              </div>
-            ))}
-          </div>
-      </section>
+      <h1 className="text-6xl font-extrabold text-center mt-20">{pageData.hero.heading}</h1>
+      <h3 className="text-4xl font-extrabold text-center capitalize mt-6">{pageData.hero.tagline}</h3>
     </main>
   )
 }
