@@ -30,7 +30,7 @@ export default function Home({ data }) {
       href: nav[i].slug.current,
     })
   }
-
+  // console.log(pageData.hero.tagline[0])
   return (
     <main>
       <Navbar navigation={navData} />
