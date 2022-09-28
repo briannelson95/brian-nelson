@@ -16,7 +16,8 @@
     "media-library",
     "asset-source-unsplash",
     "dashboard-widget-document-list",
-    "icon-picker"
+    "icon-picker",
+    "vision"
   ],
   "env": {
     "development": {
