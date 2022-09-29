@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import { portfolioPage } from "../lib/queries"
 import { client } from "../lib/sanity";
 import getYouTubeId from 'get-youtube-id';
-import YouTube from 'react-youtube';
+import Video from "../components/Video";
 
 export default function Page({ data }) {
     const pageData = data.pageData[0];
@@ -32,7 +32,7 @@ export default function Page({ data }) {
                     // <YouTube key={index} id={getYouTubeId(item.url)} width={100} height={100} />
                     <div key={index} >
                         {/* {console.log(getYouTubeId(item.url))} */}
-                        <YouTube videoId={getYouTubeId(item.url)} opts={opts} />
+                        <Video videoUrl={getYouTubeId(item.url)} />
                     </div>
                 ))}
             </div>

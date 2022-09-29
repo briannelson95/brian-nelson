@@ -8,7 +8,7 @@ export default function Navbar({ navigation }) {
     <>
         <nav>
           {/* mobile */}
-          <div className='absolute bottom-0 overflow-hidden bg-slate-200 text-black w-screen px-4 dark:bg-slate-600 dark:text-white md:hidden'>
+          <div className='overflow-hidden text-black w-screen px-4 dark:text-white md:hidden'>
             <div className='h-12 flex justify-between items-center'>
               {navigation.map((item, index) => (
                   <Link key={index} href={item.href}>
