@@ -9,8 +9,8 @@ import SEO from "../components/SEO"
 
 export default function Home({ data }) {
   const pageData = data.pageData[0]
-  const seo = pageData.seo
-  console.log(seo)
+  const seo = data.siteSettings[0].seo
+  // console.log(seo)
   
   let navData = []
   const nav = data.navigation[0].navigation
@@ -27,8 +27,9 @@ export default function Home({ data }) {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
+        image={urlFor(seo.image).url()}
       />
-      <main className="h-[2000px]">
+      <main className="h-screen">
         <Navbar navigation={navData} />
         <div className="">
           <h1 className="text-6xl font-extrabold text-center mt-20">{pageData.hero.heading}</h1>
@@ -44,10 +45,11 @@ export default function Home({ data }) {
                 dark:bg-clip-text 
                 dark:text-opacity-0 
                 dark:bg-gradient-to-r dark:from-pink-500 dark:via-purple-500 dark:to-indigo-500 
-                background-animate"> 
-                  {pageData.hero.tagline.split(' ').slice(2, 4).join(' ')}
-              </span>
-            </h3>
+                background-animate"
+            > 
+              {pageData.hero.tagline.split(' ').slice(2, 4).join(' ')}
+            </span>
+          </h3>
           </div>
       </main>
     </>
