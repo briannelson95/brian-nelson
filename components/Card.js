@@ -25,7 +25,7 @@ export default function Card({ children }) {
                     z-10 
                     h-full w-full 
                     rounded-xl 
-                    bg-white dark:bg-slate-800 dark:text-white 
+                    bg-slate-800 dark:text-white 
                     p-8 
                     before:absolute 
                     before:inset-0 

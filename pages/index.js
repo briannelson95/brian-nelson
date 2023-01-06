@@ -36,7 +36,7 @@ export default function Home({ data }) {
         <Navbar navigation={navData} />
         <div className="">
           <h1 className="text-6xl font-extrabold text-center mt-20">{pageData.hero.heading}</h1>
-          <h3 className="text-4xl font-extrabold text-center capitalize mt-6 text-black dark:text-white">
+          <h3 className="text-4xl font-extrabold text-center capitalize mt-6 text-white">
             {pageData.hero.tagline.split(' ').slice(0, 2).join(' ') + ' '}  
             <ColoredText>
               {pageData.hero.tagline.split(' ').slice(2, 4).join(' ')}
